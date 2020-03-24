@@ -10,7 +10,7 @@ class IndexController extends Controller
     {
         $pdf = App::make('dompdf.wrapper');
 
-        $html = file_get_contents(getcwd() .'/../storage/app/template.blade.php');
+        $html = file_get_contents(getcwd() .'/../resources/views/template.blade.php');
         $pdf->loadHTML($html);
 
         return $pdf->stream();
