@@ -1,6 +1,6 @@
 ## Laravel PDF Renderer
 
-Run on command line `php artisan serve --port=8080` and later enter into 
+After run on command line `composer install`, `sudo cp .env.example .env` and `php artisan key:generate`, Run `php artisan serve --port=8080` and later enter into 
 `http://localhost:8080/render` on browser
 
 I used two libs to render PDF:
