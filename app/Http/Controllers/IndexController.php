@@ -8,11 +8,9 @@ class IndexController extends Controller
 {
     public function render()
     {
-        Mail
-        $data = [
-            'foo' => 'bar'
-        ];
-        $pdf = Pdf(public_path() . '/../storage/app/template.blade.php', $data);
-        return $pdf->stream('document.pdf');
+        $path = public_path() . '/../storage/app/template.blade.php';
+        $pdf = PDF::loadFile($path);
+
+        return $pdf->stream('contrato-aluno-4106698796.pdf');
     }
 }
